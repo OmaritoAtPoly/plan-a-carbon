@@ -1,0 +1,59 @@
+{
+  "name": "plana_case_study_mid",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsc && vite",
+    "build": "vite build",
+    "lint": "eslint src/ --ext ts,tsx --cache",
+    "test": "BABEL_ENV=test jest src/",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "prop-types": "15.8.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "recharts": "2.12.7"
+  },
+  "devDependencies": {
+    "@babel/core": "7.25.8",
+    "@babel/preset-env": "7.25.8",
+    "@babel/preset-react": "7.25.7",
+    "@babel/preset-typescript": "7.25.7",
+    "@testing-library/jest-dom": "6.5.0",
+    "@testing-library/react": "16.0.1",
+    "@types/jest": "29.5.13",
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "7.18.0",
+    "@typescript-eslint/parser": "7.18.0",
+    "@vitejs/plugin-react": "4.3.2",
+    "babel-jest": "29.7.0",
+    "eslint": "8.57.1",
+    "eslint-plugin-jest-dom": "5.4.0",
+    "eslint-plugin-react": "7.37.1",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "eslint-plugin-testing-library": "6.3.0",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
+    "jest-transform-stub": "2.0.0",
+    "sass": "1.77.6",
+    "typescript": "5.6.3",
+    "vite": "5.4.8"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 2 chrome version",
+      "last 2 firefox version",
+      "last 2 safari version",
+      "last 2 edge version"
+    ]
+  },
+  "packageManager": "yarn@1.22.21"
+}
