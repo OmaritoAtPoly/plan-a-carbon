@@ -1,12 +1,14 @@
 {
-  "plugins": ["react", "@typescript-eslint", "testing-library", "jest-dom"],
+  "plugins": ["react", "@typescript-eslint", "testing-library", "jest-dom", "react-hooks"],
   "extends": [
     "eslint:recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:testing-library/react",
-    "plugin:jest-dom/recommended"
-  ],
+    "plugin:jest-dom/recommended",
+    "plugin:react-hooks/recommended",
+		"plugin:react/recommended"
+    ],
   "settings": {
     "react": {
       "version": "18.2.0"
@@ -31,13 +33,11 @@
     "semi": [
       "error", "always"
     ],
-    "indent": ["error", 2],
-    "quotes": ["error", "single"],
+    "quotes": ["error", "double"],
     "comma-dangle": ["error", "never"],
     "eol-last": ["error", "always"],
-    "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }],
+    "arrow-parens": ["warn", "as-needed", { "requireForBlockBody": true }],
     "object-curly-spacing": ["error", "always"], // prettier config: always
-    "react/jsx-closing-bracket-location": [1, "after-props"],
     "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }],
     "key-spacing": ["warn", {
       "beforeColon": false
@@ -74,6 +74,7 @@
       "memberVariableDeclaration": true,
       "parameter": true,
       "propertyDeclaration": true
-    }]
+      }],
+      "react/react-in-jsx-scope": "off"
   }
 }
