@@ -1,6 +1,6 @@
 import { JSX, useState } from "react";
 import planaLogo from "./assets/images/plana_logo.svg";
-import "./app.scss";
+import "./styles/app.scss";
 
 const Description = `Plan A helps companies monitor, reduce, and offset their carbon footprint,
   based on the data they input about their emissions. Though this gives individual companies visibility
