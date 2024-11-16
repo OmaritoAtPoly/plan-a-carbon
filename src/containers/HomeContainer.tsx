@@ -1,5 +1,5 @@
-import { useCallback, useState } from 'react'
-import { Home } from '../components/Home'
+import { useCallback, useState } from "react";
+import { Home } from "../components/Home";
 
 const options = [
     { value: "chocolate", label: "Chocolate" },
@@ -24,5 +24,5 @@ export const HomeContainer = () => {
             options={options}
             onSelectChange={handleSelectValue}
         />
-    )
-}
+    );
+};

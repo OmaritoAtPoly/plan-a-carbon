@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { BsFillBellFill, BsFillEnvelopeFill, BsJustify, BsPersonCircle, } from "react-icons/bs";
+import { BsFillBellFill, BsFillEnvelopeFill, BsJustify, BsPersonCircle } from "react-icons/bs";
 import { HeaderProps } from "../containers";
 import "../styles/_header.scss";
 
