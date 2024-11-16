@@ -1,23 +1,19 @@
 import { FC } from "react";
-import { BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, BsJustify } from "react-icons/bs";
+import { BsFillBellFill, BsFillEnvelopeFill, BsJustify, BsPersonCircle, } from "react-icons/bs";
+import { HeaderProps } from "../containers";
 import "../styles/_header.scss";
 
-interface HeaderProps {
-  OpenSidebar: () => void;
-}
+interface HeaderChildProp extends HeaderProps { }
 
-export const Header:FC<HeaderProps> = ({OpenSidebar}) => (
-  <header className='header'>
-    <div className='menu-icon'>
-      <BsJustify className='icon' onClick={OpenSidebar} />
+export const Header: FC<HeaderChildProp> = ({ OpenSidebar }) => (
+  <header className="header">
+    <div className="menu-icon">
+      <BsJustify className="icon" onClick={OpenSidebar} />
     </div>
-    <div className='header-left'>
-      <BsSearch className='icon' />
-    </div>
-    <div className='header-right'>
-      <BsFillBellFill className='icon' />
-      <BsFillEnvelopeFill className='icon' />
-      <BsPersonCircle className='icon' />
+    <div className="header-right">
+      <BsFillBellFill className="icon" />
+      <BsFillEnvelopeFill className="icon" />
+      <BsPersonCircle className="icon" />
     </div>
   </header>
-  );
+);

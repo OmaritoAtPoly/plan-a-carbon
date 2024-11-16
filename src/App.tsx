@@ -17,11 +17,11 @@ const App = (): JSX.Element => {
   return (
     <>
       <article>
-        <a href="https://plana.earth/" target="_blank">
+        <a href="https://plana.earth/" target="_blank" rel="noreferrer">
           <img src={planaLogo} className="logo" alt="Plan A logo" aria-label="Plan A" />
         </a>
       </article>
-      <h1><a href="https://plana.earth/" target="_blank">There is no Plan B</a></h1>
+      <h1><a href="https://plana.earth/" target="_blank" rel="noreferrer">There is no Plan B</a></h1>
       <p>{Description}</p>
       <div className="card">
         <button onClick={handleClick}>

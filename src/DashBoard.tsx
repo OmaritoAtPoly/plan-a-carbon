@@ -1,20 +1,21 @@
 import { useState } from "react";
-import { Header } from "./components/Header";
-import { Home } from "./components/Home";
 import { Sidebar } from "./components/Sidebar";
+import { HeaderContainer } from "./containers";
+import { HomeContainer } from "./containers/HomeContainer";
 import "./styles/layout.scss";
 
 export const DashBoard = () => {
     const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
 
     const OpenSidebar = () => {
-        setOpenSidebarToggle(!openSidebarToggle)
-    }
+        setOpenSidebarToggle(!openSidebarToggle);
+    };
+
     return (
         <div className="grid-container">
-            <Header OpenSidebar={OpenSidebar} />
+            <HeaderContainer OpenSidebar={OpenSidebar} />
             <Sidebar OpenSidebar={OpenSidebar} openSidebarToggle={openSidebarToggle} />
-            <Home />
+            <HomeContainer/>
         </div>
     );
 };

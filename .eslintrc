@@ -7,11 +7,8 @@
     "plugin:testing-library/react",
     "plugin:jest-dom/recommended",
     "plugin:react-hooks/recommended",
-		"prettier/@typescript-eslint",
-		"plugin:prettier/recommended",
-		"plugin:react/recommended", 
-		"plugin:diff/diff"
-  ],
+		"plugin:react/recommended"
+    ],
   "settings": {
     "react": {
       "version": "18.2.0"
@@ -77,6 +74,7 @@
       "memberVariableDeclaration": true,
       "parameter": true,
       "propertyDeclaration": true
-    }]
+      }],
+      "react/react-in-jsx-scope": "off"
   }
 }
