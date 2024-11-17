@@ -27,7 +27,7 @@
       "jsx": true
     }
   },
-  "ignorePatterns": ["node_modules/", "dist/"],
+  "ignorePatterns": ["node_modules/", "dist/", "model"],
   "rules": {
     "no-console": "warn",
     "semi": [
