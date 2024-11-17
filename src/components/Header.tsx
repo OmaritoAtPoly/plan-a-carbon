@@ -10,6 +10,7 @@ export const Header: FC<HeaderChildProp> = ({ OpenSidebar }) => (
     <div className="menu-icon">
       <BsJustify className="icon" onClick={OpenSidebar} />
     </div>
+    <h4>Carbon Intensity</h4>
     <div className="header-right">
       <BsFillBellFill className="icon" />
       <BsFillEnvelopeFill className="icon" />
