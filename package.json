@@ -9,7 +9,8 @@
     "lint": "eslint src/ --ext ts,tsx --cache",
     "test": "BABEL_ENV=test jest src/",
     "preview": "vite preview",
-    "gen": "dotenv -- cross-var dtsgen -o ./src/model/type.d.ts --url %REACT_APP_API_URL_DOCS%"
+    "gen": "dotenv -- cross-var dtsgen -o ./src/model/type.d.ts --url %REACT_APP_API_URL_DOCS%",
+    "prepare": "husky"
   },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -19,12 +20,12 @@
     "dtsgenerator": "^3.19.2",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react-hooks": "^5.0.0",
+    "husky": "^9.1.6",
     "prettier": "^3.3.3",
     "prop-types": "15.8.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-icons": "^5.3.0",
-    "react-loading-indicators": "^1.0.0",
     "react-select": "^5.8.3",
     "recharts": "2.12.7"
   },
@@ -73,5 +74,8 @@
     "hooks": {
       "pre-commit": "npm run lint && npm run format"
     }
+  },
+  "resolutions": {
+    "strip-ansi": "6.0.1"
   }
 }

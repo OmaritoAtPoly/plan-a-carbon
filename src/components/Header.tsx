@@ -3,9 +3,7 @@ import { BsFillBellFill, BsFillEnvelopeFill, BsJustify, BsPersonCircle } from "r
 import { HeaderProps } from "../containers";
 import "../styles/_header.scss";
 
-interface HeaderChildProp extends HeaderProps { }
-
-export const Header: FC<HeaderChildProp> = ({ OpenSidebar }) => (
+export const Header: FC<HeaderProps> = ({ OpenSidebar }) => (
   <header className="header">
     <div className="menu-icon">
       <BsJustify className="icon" onClick={OpenSidebar} />

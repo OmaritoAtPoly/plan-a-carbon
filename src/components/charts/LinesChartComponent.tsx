@@ -1,12 +1,8 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
-import { CarbonIntensityType } from "../Home";
+import { ChartValuesType } from "../../utils/interfaces/interfaces";
 
-interface LineChartType {
-    chartValues: CarbonIntensityType[];
-}
-
-export const LinesChartComponent: FC<LineChartType> = ({ chartValues }) => (
+export const LinesChartComponent: FC<ChartValuesType> = ({ chartValues }) => (
     <ResponsiveContainer width="100%" height="100%">
         <LineChart
             width={500}

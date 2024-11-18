@@ -1,5 +1,4 @@
 import { useCallback } from "react";
-// import { type AxiosResponse } from "axios";
 import { axiosPublic } from "./Interceptors";
 
 export const useGetAllApiCalls = () => {
@@ -13,7 +12,6 @@ export const useGetAllApiCalls = () => {
             result = value.data;
         } catch (error) {
             if (error instanceof Error) {
-                // notifyToaster(error.message, "error");
                 console.log(error.message);
             }
         }
@@ -21,7 +19,7 @@ export const useGetAllApiCalls = () => {
         return result;
     }, []);
 
-    const getCarbonIntensity = useCallback(async (state?: string) => {
+    const getFetchCarbonIntensity = useCallback(async (state?: string) => {
         let result;
 
         if (state) {
@@ -31,7 +29,6 @@ export const useGetAllApiCalls = () => {
                 result = value.data;
             } catch (error) {
                 if (error instanceof Error) {
-                    // notifyToaster(error.message, "error");
                     console.log(error.message);
                 }
             }
@@ -40,5 +37,5 @@ export const useGetAllApiCalls = () => {
         return result;
     }, []);
 
-    return { getAllStates, getCarbonIntensity };
+    return { getAllStates, getFetchCarbonIntensity };
 };

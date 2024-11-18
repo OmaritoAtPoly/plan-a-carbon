@@ -3,12 +3,12 @@ import { IoLeafOutline } from "react-icons/io5";
 import "../styles/_sidebar.scss";
 import { SideBarItems } from "./SideBarItems";
 
-interface SidevBarProps {
+interface SideBarProps {
   openSidebarToggle: boolean;
   OpenSidebar: () => void;
 }
 
-export const Sidebar: FC<SidevBarProps> = ({ openSidebarToggle, OpenSidebar }) => (
+export const Sidebar: FC<SideBarProps> = ({ openSidebarToggle, OpenSidebar }) => (
   <aside
     id="sidebar"
     className={openSidebarToggle ? "sidebar-responsive" : ""}
