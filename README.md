@@ -1,5 +1,6 @@
 # Plan A Frontend Coding Challenge
 
+### In order to run, this project, it's necessary just to run YARN START command
 ## Intro
 
 Plan A helps companies monitor, reduce, and offset their carbon footprint, based on the data
