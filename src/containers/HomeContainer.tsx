@@ -1,28 +1,27 @@
-import { useCallback, useState } from "react";
+import { useEffect } from "react";
 import { Home } from "../components/Home";
-
-const options = [
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
-    { value: "vanilla", label: "Vanilla" }
-];
+import { useGetFetchData } from "../utils/fetchers/useGetChartData";
 
 export const HomeContainer = () => {
-    const [selectValue, setSelectValue] = useState<{
-        value: string;
-        label: string;
-    } | null>(null);
+    const { selectOptions, selectValue, handleSelectValue, handleGetStates, charValues, getCarbonIntensity } = useGetFetchData();
 
-    const handleSelectValue = useCallback(
-        (newValue: { value: string; label: string } | null) => {
-            setSelectValue(newValue);
-        }, []);
+    useEffect(() => {
+        if (selectValue?.label === undefined) {
+            handleGetStates();
+        }
+
+        if (selectValue?.label) {
+            getCarbonIntensity();
+        }
+
+    }, [getCarbonIntensity, handleGetStates, selectValue?.label]);
 
     return (
         <Home
             stateName={selectValue?.label}
-            options={options}
+            options={selectOptions}
             onSelectChange={handleSelectValue}
+            chartValues={charValues}
         />
     );
 };

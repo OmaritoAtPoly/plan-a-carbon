@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Sidebar } from "./components/Sidebar";
-import { HeaderContainer } from "./containers";
-import { HomeContainer } from "./containers/HomeContainer";
+import { HeaderContainer, HomeContainer } from "./containers";
 import "./styles/layout.scss";
 
 export const DashBoard = () => {
